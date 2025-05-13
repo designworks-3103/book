@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="reservation">
+    <title>予約ページ</title>
+     <!-- webfonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Zen+Maru+Gothic&family=Zen+Old+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
+     <link href = " https://fonts.cdnfonts.com/css/academy-engraved-let " rel = "stylesheet" >
+   
+     <!-- css -->
+     <link rel="stylesheet" href="./assets/css/destyle.css">
+     <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<body>
+    <header id="header" class="header__group">
+            <p class="header__title"><a href="./index.html">The Book Curator</a></p>
+            <nav class="header__btn">
+               <a class="header__btn--login" href="loginpage.html"> <img src="./images/mypage.png" alt="ログイン"></a>
+               <a class="header__btn--menu" href="menu.html"><img src="./images/menu.png" alt="メニュー"></a>
+            </nav>
+    </header>
+     <main>
+        <article id="reservation" class="reservation">
+
+            <figure class="figure0"><img class="reserve__pic" src="./images/noname.jpg" alt="Noname"><figcaption class="reserve__caption"><p>指名なし<span>の予約可能日時</span></p></figcaption></figure>
+
+            <figure class="figure1"><img class="reserve__pic" src="./images/Tanaka.jpg" alt="Tanaka"><figcaption class="reserve__caption"><p>田中 和良<span>の予約可能日時</span></p><a href="./curators.html#Tanaka">このキュレーターの詳細</a></figcaption></figure>
+            
+            <figure class="figure2"><img class="reserve__pic" src="./images/Iwasa.jpg" alt="Iwasa"><figcaption class="reserve__caption"><p>岩佐 弥生<span>の予約可能日時</span></p><a href="./curators.html#Iwasa">このキュレーターの詳細</a></figcaption></figure>
+            
+            <figure class="figure3"><img class="reserve__pic" src="./images/Sato.jpg" alt="Sato"><figcaption class="reserve__caption"><p>佐藤 正雄<span>の予約可能日時</span></p><a href="./curators.html#Sato">このキュレーターの詳細</a></figcaption></figure>
+            
+            <figure class="figure4"><img class="reserve__pic" src="./images/Ueda.jpg" alt="Ueda"><figcaption class="reserve__caption"><p>植田 綾香<span>の予約可能日時</span></p><a href="./curators.html#Ueda">このキュレーターの詳細</a></figcaption></figure>
+            
+            <figure class="figure5"><img class="reserve__pic" src="./images/Onishi.jpg" alt="Onishi"><figcaption class="reserve__caption"><p>大西樹生<span>の予約可能日時</span></p><a href="./curators.html#Onishi">このキュレーターの詳細</a></figcaption></figure>
+            
+        </article> 
+
+        <section class="name__bar">  
+            <div class="try"><h2>他のキュレーターの予約可能日時をみる</h2></div> 
+            <div class="scroll">
+            <ul class="name__wrapper">
+                <li class="name0">指名なし</li>
+                <li class="name1">田中和良</li>
+                <li class="name2">岩佐弥生</li>
+                <li class="name3">佐藤正雄</li>
+                <li class="name4">植田綾香</li>
+                <li class="name5">大西樹生</li>
+            </ul>
+            </div>
+        </section>
+
+        <section class="choice">
+            <h2>ご希望の来店日時を選択してください</h2>
+
+            <div>
+            <button class="last above" >前の一週間</button> 
+            <button class="next above">次の一週間</button>
+            </div>
+
+
+                 <!-- ここに予約カレンダー表作成 -->
+                
+                   <table>
+                     <thead>
+                       <tr>
+                         <th class="weektime">時間/曜日</th>
+                         <th>(月)<br>2/24</th>
+                         <th>(火)<br>2/25</th>
+                         <th>(水)<br>2/26</th>
+                         <th>(木)<br>2/27</th>
+                         <th>(金)<br>2/28</th>
+                         <th class="saturday">(土)<br>3/1</th>
+                         <th class="sunday">(日)<br>3/2</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       <!-- 9:00〜20:00の時間帯ごと -->
+                       <!-- 09:00 -->
+                       <tr>
+                         <td class="weektime">09:00</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="booked">×</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                       </tr>
+                       <!-- 10:00 -->
+                       <tr>
+                         <td class="weektime">10:00</td>
+                         <td class="available">◎</td>
+                         <td class="booked">×</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="booked">×</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                       </tr>
+                       <!-- 11:00 -->
+                       <tr>
+                         <td class="weektime">11:00</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="booked">×</td>
+                       </tr>
+                       <!-- 12:00 -->
+                       <tr>
+                         <td class="weektime">12:00</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="booked">×</td>
+                       </tr>
+                       <!-- 13:00 -->
+                       <tr>
+                         <td class="weektime">13:00</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="booked">×</td>
+                         <td class="available">◎</td>
+                         <td class="booked">×</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                       </tr>
+                       <!-- 14:00 -->
+                       <tr>
+                         <td class="weektime">14:00</td>
+                         <td class="booked">×</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                       </tr>
+                       <!-- 15:00 -->
+                       <tr>
+                         <td class="weektime">15:00</td>
+                         <td class="available">◎</td>
+                         <td class="booked">×</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="booked">×</td>
+                         <td class="available">◎</td>
+                       </tr>
+                       <!-- 16:00 -->
+                       <tr>
+                         <td class="weektime">16:00</td>
+                         <td class="booked">×</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                       </tr>
+                       <!-- 17:00 -->
+                       <tr>
+                         <td class="weektime">17:00</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="booked">×</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                       </tr>
+                       <!-- 18:00 -->
+                       <tr>
+                         <td class="weektime">18:00</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="booked">×</td>
+                         <td class="available">◎</td>
+                         <td class="booked">×</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                       </tr>
+                       <!-- 19:00 -->
+                       <tr>
+                         <td class="weektime">19:00</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="booked">×</td>
+                         <td class="booked">×</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                       </tr>
+                       <!-- 20:00 -->
+                       <tr>
+                         <td class="weektime">20:00</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="booked">×</td>
+                         <td class="available">◎</td>
+                         <td class="available">◎</td>
+                         <td class="booked">×</td>
+                         <td class="booked">×</td>
+                       </tr>
+                     </tbody>
+                   </table>
+
+            <div>
+            <button class="last bottom">前の一週間</button> 
+            <button class="next bottom">次の一週間</button>
+            </div>
+
+            <p><span>◎</span>：予約できます</p>
+
+        </section>
+
+        <section class="confirm">
+
+            <h2>予約内容</h2>
+            <div><h3>来店日時</h3>
+            <p class="line">2024年12月23日(月) 09:00</p></div>
+            <div><h3>キュレーター</h3>
+            <p class="line">佐藤正雄</p></div>
+
+            <h2>お客様情報</h2>
+            <div><h3>ご予約者氏名</h3>
+            <p>山田花子</p></div>
+            <div><h3>連絡可能な電話番号</h3>
+            <p>080-0000-XXXX</p></div>
+
+            <h2>キャンセルについて</h2>
+            <h3>マイページからのキャンセル可能期限</h3>
+            <p>2024年12月22日(日) 23:59</p>
+        </section>   
+
+       <article class="attention">
+         <h4>ご予約に際しての注意事項</h4>
+         <p class="attention__text">ご予約時間に遅れた場合、ご対応できかねる場合があります。又、10分以上ご連絡がない場合、無断キャンセル扱いとさせていただきます。店舗の混雑状況により、時間が前後する場合があることを予めご了承ください。</p>
+       </article> 
+
+       <button type="submit" class="finalize"><p class="sub">上記に同意の上</p><p>予約を確定する</p></button>
+       <button type="reset" class="change">内容を変更する</button>
+
+        
+        
+    </main>
+    <footer id="footer" class="footer__group">
+        <div class="sns__icons">
+           <a class="sns__icon--01" href="#"><img src="./images/instagram.png" alt="インスタグラムアイコン" ></a>
+           <a class="sns__icon--02" href="#"><img src="./images/X.png" alt="Xアイコン" ></a>
+           <a class="sns__icon--03" href="#"><img src="./images/note.png" alt="noteアイコン"></a>
+        </div>
+        <nav class="footer__nav">
+         <ul class="footer__nav--item">
+           <li class="footer__nav--item01"><a href="#">来店予約</a></li>
+           <li class="footer__nav--item02"><a href="#">お問い合わせ</a></li>
+           <li class="footer__nav--item03"><a href="#">利用規約</a></li>
+         </ul>
+       </nav>
+        <p class="footer__title">The Book Curator</p>
+        <div class="small"><small>&copy;2023 All Rights Reserved.</small></div>
+    </footer>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

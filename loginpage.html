@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="login">
+    <title>ログインページ</title>
+     <!-- webfonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Zen+Maru+Gothic&family=Zen+Old+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
+     <link href = " https://fonts.cdnfonts.com/css/academy-engraved-let " rel = "stylesheet" >
+   
+     <!-- css -->
+     <link rel="stylesheet" href="./assets/css/destyle.css">
+     <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<body>
+    <header id="header" class="header__group">
+        <p class="header__title"><a href="./index.html">The Book Curator</a></p>
+        <nav class="header__btn">
+           <a class="header__btn--login" href="loginpage.html"> <img src="./images/mypage.png" alt="ログイン"></a>
+           <a class="header__btn--menu" href="menu.html"><img src="./images/menu.png" alt="メニュー"></a>
+        </nav>
+    </header>
+
+    <main class="loginpage">
+        <p class="loginpage__title">本との出会いを<br>デザインする</p>
+        <h1>The Book Curator</h1>
+
+<!-- メールフォームが入る -->
+
+        <form>
+            <div class="form-group">
+            <label for="username">ユーザー名</label>
+            <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+            <label for="password">パスワード</label>
+            <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn-border-shadow4">ログイン</button>
+        </form>
+
+
+
+        <p class="forget">パスワードを忘れた方</p>
+        <p class="registration">新規登録の方はこちら</p>
+    </main>
+
+    <footer id="footer" class="footer__group">
+        <div class="sns__icons">
+           <a class="sns__icon--01" href="#"><img src="./images/instagram.png" alt="インスタグラムアイコン" ></a>
+           <a class="sns__icon--02" href="#"><img src="./images/X.png" alt="Xアイコン" ></a>
+           <a class="sns__icon--03" href="#"><img src="./images/note.png" alt="noteアイコン"></a>
+        </div>
+        <nav class="footer__nav">
+         <ul class="footer__nav--item">
+           <li class="footer__nav--item01"><a href="#">来店予約</a></li>
+           <li class="footer__nav--item02"><a href="#">お問い合わせ</a></li>
+           <li class="footer__nav--item03"><a href="#">利用規約</a></li>
+         </ul>
+       </nav>
+        <p class="footer__title">The Book Curator</p>
+        <div class="small"><small>&copy;2023 All Rights Reserved.</small></div>
+    </footer>
+
+</body>
+</html>

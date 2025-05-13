@@ -1,0 +1,1614 @@
+@charset "utf-8";
+/* ===============
+common
+================== */
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    color: #4E1B10;
+    background-color: #F8E4CB;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img{
+    max-width: 100%;
+}
+h3{
+    font-family: 'Zen Old Mincho';
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* ===============
+header
+================== */
+
+.header__group{
+    max-width: 100%;
+    height: 60px;
+    border-bottom: solid 1.5px  #4E1B10;
+    position: relative;
+    box-shadow: 0px 4px 4px 0px rgba(78, 27, 16, 0.25);
+    z-index: 3;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    
+}
+.header__title{
+    font-family: "Academy Engraved LET";
+    font-size: 2.8rem;
+    font-weight: 400; 
+    line-height: 1;
+    margin-left: 5%;
+    margin-top: 18px;
+}
+.header__btn{
+    width: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    margin-right: 5%;
+}
+
+
+/* ===============
+mainVisual
+================== */
+
+.mainVisual{
+    height: 475px;
+    background-image: url("../../images/mainvisual_sp.jpg");
+    background-position: center center; 
+    background-size: cover; 
+    display: flex;
+    justify-content: center;
+}
+.mainVisual__title{
+    font-family: "Academy Engraved LET";
+    font-size: 6.4rem;
+    font-weight: 400;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #4E1B10;
+    line-height: 76px; 
+    letter-spacing:  1.92px;
+    width: 290px;
+    height: 152px;
+    text-align: center;
+    margin: 125px auto 0;
+}
+
+@media screen and (min-width:768px) {
+    .mainVisual{
+        height: 475px;
+        background-image: url(../../images/mainvisual_pc.jpg);
+    }
+    .mainVisual__title{
+        text-shadow: 5px 5px 15px #F7F3EE;
+        -webkit-text-stroke-width: 0.6000000238418579;
+        -webkit-text-stroke-color: #4E1B10;
+        font-size: 9.6rem;
+        line-height: 100%; /* 96px */
+        letter-spacing: 2.88px;
+        width: 495px;
+        height: 190px;
+        margin: 150px auto 135px;
+    }
+}
+
+/* ===============
+concept
+================== */
+.section__concept {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    background-size: cover;
+    background-color: rgba(253, 237, 249, 0.526);
+    
+}
+.section__concept:before {
+    content: '';
+    background-image: url(../../images/concept.jpg);
+    width: 100%;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0px;
+    z-index: -2;
+}
+
+
+.section__concept--title{
+    font-family: "Zen Old Mincho";
+    font-size: 3.6rem;
+    font-weight: 500;
+    width: 252px;
+    height: 104px;
+    margin: 95px auto 0;
+    position: relative;
+    text-align: center;
+
+}
+.section__concept--title::before{
+    content: 'Concept';
+    color: rgba(78, 27, 16, 0.25);
+    font-family: "Nothing You Could Do";
+    font-size: 3.6rem;
+    font-weight: 400;
+    transform:rotate(-8deg);
+    position: absolute;
+    top: -50px;
+    left: -30px;
+}
+.section__concept--txt{
+    font-family: 'Zen Old Mincho';
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 160%; /* 28.8px */
+    letter-spacing: 0.9px;
+    margin: 20px 12%;
+}
+
+
+/* ============もっと見るボタン================*/
+.btn {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.main{
+    font-family: "Zen Maru Gothic";
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-left: 20px;
+}
+.sub{
+    font-family: "Nothing You Could Do";
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-right: 20px;
+    margin-bottom: -8px;
+}
+a.btn-border-shadow {
+  width: 240px;
+  height: 40px;
+  margin: 65px auto;
+  background: rgba(249, 188, 160, 0.55);
+  box-shadow: 4px 4px 4px 0px rgba(78, 27, 16, 0.25);
+}
+a.btn-border-shadow:before {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+
+  width: 100%;
+  height: 100%;
+
+  content: "";
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 1px solid;
+}
+a.btn-border-shadow:hover:before {
+  top: 0;
+  left: 0;
+}
+a.btn-border-shadow:active {
+    background: rgba(246, 143, 114, 0.55);
+}
+
+
+/*==========メディアクエリ============*/
+@media screen and (min-width:768px){
+    .section__concept{
+        background-color: #FFF1E7;
+        background-image: url(../../images/pic.png);
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+    .section__concept:before {
+        display: none;
+    }
+    .concept__innr{
+        flex-direction: column;
+        width: 70%;
+        padding-left: 10%;
+        box-sizing: border-box;
+        text-align: left;
+    }
+    .section__concept--title{
+        width: 390px;
+        height: 45px;
+        font-size: 3.0rem;
+        margin-top: 170px;
+        text-align: center;
+        position: relative;
+    }
+    .section__concept--title::before{
+        font-size: 6.4rem;
+        top: -80px;
+        left: -30px;
+    }
+    .section__concept--txt{
+        font-size: 1.6rem;
+        line-height: 200%;
+        letter-spacing: 0.8px;
+        margin: 65px 0 75px;
+    }
+    a.btn-border-shadow {
+        margin: 60px auto 120px;
+      }  
+}
+
+
+/* ===============
+news
+================== */
+
+.border__news{
+    margin: 85px 5%;
+    border-radius: 10px;
+    border: 1px dashed;
+    background: rgba(217, 217, 217, 0.00);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section__topics--news{
+    font-family: 'Zen Old Mincho';
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 25px;
+    position: relative;
+}
+.section__topics--news::before{
+    content: 'News';
+    color: rgba(78, 27, 16, 0.25);
+    font-family: "Nothing You Could Do";
+    font-size: 3.6rem;
+    font-weight: 400;
+    transform:rotate(-8deg);
+    position: absolute;
+    top: -30px;
+    left: -50px;
+}
+.section__news--list{
+    width: 85%;
+    margin: 31px 7% 45px;
+}
+.news__time{
+    font-family: "Hiragino Sans";
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 180%; /* 27px */
+    letter-spacing: 0.45px; 
+    display: block;
+}
+.container__news{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    border-bottom: 1px dashed;
+    margin-bottom: 25px;
+} 
+.news__txt{
+    font-family: "Zen Maru Gothic";
+    font-size: 1.6rem;
+    font-weight: 400;
+}  
+.news__arrow{
+    width: 10px;
+    height: 10px;
+    margin-left: 50px;
+}
+.section__news--info{
+    font-family: "Zen Maru Gothic";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 130%; /* 18.2px */
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 5.5%; /* 0.77px */
+    text-underline-offset: 14%; /* 1.96px */
+    text-underline-position: from-font;
+
+    margin-right: 7%;
+    margin-left: auto; 
+    margin-bottom: 16px;    
+}
+
+@media screen and (min-width:768px){
+    .section__topics--news{
+        font-size: 2.6rem;
+    }
+    .section__topics--news::before{
+        content: 'News';
+        color: rgba(78, 27, 16, 0.25);
+        font-family: "Nothing You Could Do";
+        font-size: 6.4rem;
+        top: -25px;
+        left: -160px;
+    }
+    .news__txt{
+        font-size: 1.8rem;
+    }
+}
+
+/* ===============
+curators
+================== */
+.section__curators{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section__topics--curators{
+    font-family: 'Zen Old Mincho';
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 65px;
+    position: relative;
+}
+.section__topics--curators::before{
+    content: 'Curators';
+    color: rgba(78, 27, 16, 0.25);
+    font-family: "Nothing You Could Do";
+    font-size: 3.6rem;
+    font-weight: 400;
+    transform:rotate(-9deg);
+    position: absolute;
+    top: -35px;
+    left: -65px; 
+}
+.section__curators--txt{
+    font-family: "Zen Old Mincho";
+    font-size: 2.0rem;
+    font-weight: 400;
+    line-height: 150%; /* 30px */
+    width: 220px;
+    margin: 20px auto 50px;
+}
+
+/* ========写真スライド======== */
+.pic__container {
+    width: 100%;
+    max-width: 900px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: row;
+}  
+.pic__wrapper {
+    width: 100%;
+    min-width: min-content;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    animation: slideflow 40s infinite linear 1s both;
+}
+.pic{
+    min-width: 240px;
+    height: 240px; 
+    align-items: center;
+    border-radius: 20px;
+    margin-right: 20px;
+    box-shadow: 4px 4px 4px 4px rgba(78, 27, 16, 0.15);
+}
+.caption{
+    text-align: center;
+    font-family: "Zen Old Mincho";
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 15px auto;
+}
+  
+ @keyframes slideflow {
+     0% {transform: translateX(0);}
+ 100% {transform: translateX(-100%);} 
+}  
+
+.section__curators a{
+    margin: 60px auto 80px;
+}
+
+
+@media screen and (min-width:768px) {
+    .section__topics--curators{
+        font-size: 2.6rem;
+        margin-top: 120px;
+        position: relative;
+    }  
+    .section__topics--curators::before{
+        font-size: 6.4rem;
+        top: -50px;
+        left: -260px; 
+    }
+    .section__curators--txt{
+        line-height: 180%; /* 30px */
+        width: 470px;
+        height: 35px;
+        text-align: center;
+        margin: 25px auto 50px;
+    }  
+}
+
+/* ===============
+access
+================== */
+.pc{
+    background-color: #FFEDE5;
+    padding: 100px 5% 60px;
+}
+.section__acsess{
+    margin: 0 0 120px;
+}
+.section__topics--access{
+    font-family: 'Zen Old Mincho';
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: left;
+    position: relative;
+}
+.section__topics--access::before{
+    content: 'Access';
+    color: rgba(78, 27, 16, 0.25);
+    font-family: "Nothing You Could Do";
+    font-size: 3.6rem;
+    font-weight: 400;
+    transform:rotate(-7deg);
+    position: absolute;
+    top: -40px;
+    left: -7px; 
+}
+hr{
+    height: 1px;
+    width: 100%;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+address{
+    font-family: "Zen Maru Gothic";
+    font-size: 2.0rem;
+    font-weight: 400;
+    margin-top: 15px;
+}
+.section__acsess--list{
+    font-family: "Zen Maru Gothic";
+    font-size: 1.6rem;
+    line-height: 180%; /* 28.8px */
+    margin-top: 15px;
+}
+
+
+/* =========Googleマップで見るボタン===========*/
+
+.btn2 {
+    position: relative;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; 
+  }
+  .arrow,
+ .map{
+    font-family: "Zen Maru Gothic";
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 180%; /* 28.8px */
+  }
+  a.btn-border-shadow2 {
+    width: 240px;
+    height: 40px;
+    margin: 30px auto 45px;
+    background:#F8E4CB;
+    box-shadow: 4px 4px 4px 0px rgba(78, 27, 16, 0.25);
+  }
+  a.btn-border-shadow2:before {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+  
+    width: 100%;
+    height: 100%;
+  
+    content: "";
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid;
+  }
+  a.btn-border-shadow2:hover:before {
+    top: 0;
+    left: 0;
+  }
+
+/* ===========店鋪外観写真============ */
+.section__acsess--pic{
+    display: block;
+    margin: 0 auto;
+    box-shadow: 4px 4px 4px 4px rgba(78, 27, 16, 0.25);
+}
+
+
+/* ===============
+store
+================== */
+.section__store{ 
+    margin: 0;
+}
+.section__topics--store{
+    font-family: 'Zen Old Mincho';
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: left;
+    position: relative;
+}
+.section__topics--store::before{
+    content: 'Store';
+    color: rgba(78, 27, 16, 0.25);
+    font-family: "Nothing You Could Do";
+    font-size: 3.6rem;
+    font-weight: 400;
+    transform:rotate(-7deg);
+    position: absolute;
+    top: -35px;
+    left: -7px; 
+}
+.section__store--list{
+    font-family: "Zen Maru Gothic";
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 180%; /* 28.8px */
+}
+.section__store--pic{
+    display: none;
+} 
+
+@media screen and (min-width:768px){
+    .pc{
+        display: flex; 
+    }
+    .section__acsess{
+        margin: 0 5% 0 0;
+        width: 50%;
+        box-sizing: border-box;
+    }
+    .section__topics--access{
+        font-size: 2.6rem;
+    }
+    .section__topics--access::before{
+        font-size: 6.4rem;
+        top: -60px;
+        left: -20px; 
+    }
+    hr{
+        margin-bottom: 15px;
+    }
+    address{
+        margin-top: 23px;
+    }
+    .section__acsess--list{
+        margin-top: 15px;
+    }
+    a.btn-border-shadow2 {
+        width: 240px;
+        height: 40px;
+        margin: 60px auto 45px 0;
+        background:#F8E4CB;
+        box-shadow: 4px 4px 4px 0px rgba(78, 27, 16, 0.25);
+      }
+    .section__acsess--pic{
+        display: none;
+    }
+    .section__store{ 
+        margin: 0 0 0 3%;
+        width: 50%;
+        box-sizing: border-box;
+    }
+    .section__topics--store{
+        font-size: 2.6rem;
+    }
+    .section__topics--store::before{
+        font-size: 6.4rem;
+        top: -55px;
+        left: -40px; 
+    }
+    .section__store--list{
+        font-family: "Zen Maru Gothic";
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 180%; /* 28.8px */
+    }
+    .section__store--pic{
+        display: block;
+        margin: 40px auto 40px 0;
+        box-shadow: 4px 4px 4px 4px rgba(78, 27, 16, 0.25);
+    } 
+}
+
+
+/* ===============
+footer
+================== */
+.footer__group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+ .sns__icons{
+    width: 191px;
+    height: 37px;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto 30px;
+ }
+.footer__nav--item{
+    text-align: center;
+    font-family: "Zen Old Mincho";
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.48px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+.footer__nav--item li{
+    padding: 0 10px;
+    line-height: 1;
+    border-right: solid 0.5px #4E1B10;;
+}
+.footer__nav--item li:last-child{
+    border-right:none;
+}
+.footer__title{
+    font-family: "Academy Engraved LET";
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.small{
+    font-family: "Zen Old Mincho";
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.48px;
+    margin-bottom: 60px;
+}
+
+
+
+/* =======================
+ ****** about.html ******
+==========================*/
+.aboutPage main,.aboutPage footer{
+    background-color: #FFF1E7;
+}
+
+/* ================
+about
+===================*/
+.section__about{
+    background-image: url(../../images/about_top.png);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* margin-bottom: 90px;  */
+}
+.section__about h3{
+    margin: 110px auto 15px;
+}
+.section__about h4{
+    text-align: center;
+    font-family: "Zen Old Mincho";
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 15px;
+}
+.section__about p{
+    font-family: "Zen Old Mincho";
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 160%; 
+    letter-spacing: 0.8px;
+    text-align: justify; 
+    margin: 30px 12% 0;   
+}
+.float-right-bottom-wrapper {
+	display: flex;
+}
+.float-right-bottom img {
+    float: right;
+    margin: 0 12% 0px 15px; 
+}
+.float-right-bottom p{
+    font-family: "Zen Old Mincho";
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 160%; 
+    letter-spacing: 0.8px;
+    text-align: justify; 
+    margin: 0 12%;
+}
+/* ====================
+recommend
+======================*/
+.rec{
+   margin-top: 120px;
+
+}
+.rec h3{
+    width: 320px;
+    margin: 0px auto 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.rec h3::before{
+    content: "Recommended";
+    color: rgba(78, 27, 16, 0.25);
+    font-family: "Nothing You Could Do";
+    font-size: 3.6rem;
+    font-weight: 400;
+    transform:rotate(-9deg);
+    position: absolute;
+    top: -60px;
+    left: 15px;
+}
+.rec h3::after{
+    content: url(../../images/image\ 20.png);
+    position:  absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%) rotate(2deg);
+} 
+.rec ul{
+    margin: 60px 9% 0 18% ;
+}
+ .rec ul li{
+    margin-bottom: 15px;
+    font-family: "Zen Maru Gothic";
+    font-size: 2.0rem;
+    font-weight: 400;
+    position: relative;
+    display: flex;
+ }
+ .rec ul li::before{
+    content: url(../../images/lsicon_batch-check-outline.png);
+    position: absolute;
+    top: 3px;
+    left: -33px;
+ }
+ .rec p{
+    text-align: center;
+    font-family: "Zen Old Mincho";
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 70px 3% 80px;
+    position: relative;
+ }
+ .rec p::before{
+    content: url(../../images/image\ 21.png);
+    position: absolute;
+    top: -85px;
+    right: 0;  
+ }
+ .rec p::after{
+    content: url(../../images/image\ 29.png);
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+ }
+
+ /* =====================
+ flow
+ ======================*/
+.section__flow{
+    width: 100%;
+    padding: 100px 0 0px;
+}
+ .section__flow h3{
+    width: 170px;
+    margin: 0 auto 55px ;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+} 
+.section__flow h3::before{
+    content: "Flow";
+    font-family: "Nothing You Could Do";
+    color:  rgba(78, 27, 16, 0.25);
+    font-size: 3.6rem;
+    font-weight: 400;
+    transform: rotate(-10deg);
+    position: absolute;
+    top: -40px;
+    left: -40px;
+}
+.section__flow ol li{
+    padding: 0 9% 65px 20%;
+    display: flex;
+    position: relative;
+}
+.section__flow ol li dl dt{
+    font-family: "Zen Old Mincho";
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+.section__flow ol li dl dd{
+    font-family: "Zen Maru Gothic";
+    font-size: 2.0rem;
+    font-weight: 200;
+}
+/* ============装飾イラスト============ */
+.section__flow ol li:nth-child(1){
+    background-image: url(../../images/yoyaku_illust.png);
+    background-position: -25px 0px;
+    background-repeat: no-repeat;
+}
+.section__flow ol li:nth-child(2){
+    background-image: url(../../images/touroku_illust.png);
+    background-position: -25px 0px;
+    background-repeat: no-repeat;
+}
+.section__flow ol li:nth-child(3){
+    background-image: url(../../images/taimenn_illust.png);
+    background-position: -25px 0px;
+    background-repeat: no-repeat;
+}
+.section__flow ol li:nth-child(4){
+    background-image: url(../../images/book_illust.png);
+    background-position: -25px 0px;
+    background-repeat: no-repeat;
+}
+.section__flow ol li:nth-child(5){
+    background-image: url(../../images/check_illust.png);
+    background-position: -25px 0px;
+    background-repeat: no-repeat;
+}
+/* ================装飾番号================= */
+.section__flow ol li:nth-child(1):before{
+    content: "1";
+    color: rgba(78, 27, 16, 0.15);
+    font-family: "YuMincho +36p Kana";
+    font-size: 12.8rem;
+    font-weight: 500;
+    position: absolute;
+    top: -80px;
+    left: 13px;
+}
+.section__flow ol li:nth-child(2):before{
+    content: "2";
+    color: rgba(78, 27, 16, 0.15);
+    font-family: "YuMincho +36p Kana";
+    font-size: 12.8rem;
+    font-weight: 500;
+    position: absolute;
+    top: -80px;
+    left: 13px
+}
+.section__flow ol li:nth-child(3):before{
+    content: "3";
+    color: rgba(78, 27, 16, 0.15);
+    font-family: "YuMincho +36p Kana";
+    font-size: 12.8rem;
+    font-weight: 500;
+    position: absolute;
+    top: -80px;
+    left: 13px;
+}
+.section__flow ol li:nth-child(4):before{
+    content: "4";
+    color: rgba(78, 27, 16, 0.15);
+    font-family: "YuMincho +36p Kana";
+    font-size: 12.8rem;
+    font-weight: 500;
+    position: absolute;
+    top: -80px;
+    left: 13px;
+}
+.section__flow ol li:nth-child(5):before{
+    content: "5";
+    color: rgba(78, 27, 16, 0.15);
+    font-family: "YuMincho +36p Kana";
+    font-size: 12.8rem;
+    font-weight: 500;
+    position: absolute;
+    top: -80px;
+    left: 13px;
+}
+.section__flow div{
+    background-image: url(../../images/books.png);
+    background-size: cover;
+    background-position: center center;
+    display: flex; 
+    width: 100%;
+    height: 105px; 
+}
+.section__flow p{ 
+    align-self: center;
+    text-align: center;
+    font-family: "Hiragino Mincho ProN";
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-decoration: underline solid 3%;
+    margin: 0px auto;
+    position: relative;
+    /* display: block; */
+}
+.section__flow p::after{
+    content: "check";
+    text-align: center;
+    font-family: "Nothing You Could Do";
+    font-size: 1.5rem;
+    font-weight: 400;
+    position: absolute;
+    top: 7px;
+    right: -75px;
+}
+
+/* ==============================
+*******   curators.html  ********
+================================*/
+
+/* .section__curators */
+
+.list__card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}  
+
+.item__card{
+    width: 350px;
+    height: 500px; 
+    background-color: #FFF1E7;
+    margin: 0 10px 60px;
+    box-shadow: 0px 4px 4px 0px rgba(78, 27, 16, 0.25);
+    position: relative;
+}
+ /* .item__card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 8px 0px rgba(78, 27, 16, 0.3);
+    transition: all .5s;
+  }  */
+.item__card::before{
+    color: rgba(78, 27, 16, 0.25);
+    font-family: "Qwitcher Grypen";
+    text-align: center;
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 30px; /* 62.5% */
+    
+    content: "Kazuyoshi Tanaka";
+    width: 152px;
+    height: 67px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transform: rotate(3deg);
+}
+.item__card::after{
+    content: "";
+    display: block;
+    width: 172px;
+    height: 1px;
+    background-color: #4E1B10;
+    position: absolute;
+    top: 135px;
+    right: 25px;  
+}
+.item__card figure img{
+    width: 112px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0px 4px 4px 0px rgba(78, 27, 16, 0.25);
+    margin-top: 23px;
+    margin-left: 23px;
+}
+.item__card figure figcaption{
+    text-align: center;
+    font-family: "Zen Old Mincho";
+    font-size: 2.4rem;
+    font-weight: 700;
+    position: absolute;
+    top: 100px;
+    left: 155px;
+}
+.card__txt{
+    height: 140px;
+    font-family: "Zen Maru Gothic";
+    font-size: 2.0rem;
+    font-weight: 400;
+    line-height: 130%; /* 26px */
+    margin: 25px 25px 0;
+}
+.speciality{
+    font-family: "Zen Maru Gothic";
+    font-size: 16px;
+    font-weight: 400;
+    margin: 10px auto 0 15px;
+}
+.category{
+    display: flex;
+    margin: 2px 25px 35px ;
+}
+.category li{
+    margin-right: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+.category li:last-child{
+    margin-right: 0;
+}
+.category li img{
+    box-shadow: 0px 4px 4px 0px rgba(78, 27, 16, 0.25);
+    border-radius: 4px;
+}
+
+
+/* ===========指名ボタン=========== */
+ .btn3 {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     position: relative;
+     cursor: pointer;
+     transition: all 0.3s;
+ }
+
+ .reserve {
+     font-family: "Zen Maru Gothic";
+     font-size: 1.6rem;
+     font-weight: 400;
+     margin-left: 20px;
+ }
+
+ .click {
+     font-family: "Nothing You Could Do";
+     font-size: 1.3rem;
+     font-weight: 400;
+     margin-right: 20px;
+     margin-bottom: -8px;
+ }
+
+ a.btn-border-shadow3 {
+     width: 240px;
+     height: 40px;
+     margin: 0 auto;
+     background: rgba(249, 188, 160, 0.55);
+     box-shadow: 4px 4px 4px 0px rgba(78, 27, 16, 0.25);
+ }
+
+ a.btn-border-shadow3:before {
+     position: absolute;
+     top: -5px;
+     left: -5px;
+     width: 100%;
+     height: 100%;
+     content: "";
+     -webkit-transition: all 0.3s ease;
+     transition: all 0.3s ease;
+     border: 1px solid;
+ }
+
+ a.btn-border-shadow3:hover:before {
+     top: 0;
+     left: 0;
+ }
+ 
+ a.btn-border-shadow3:active {
+    background: rgba(246, 143, 114, 0.55);
+}
+
+  /* ===========装飾名前============= */
+  .item__card:nth-child(2):before{
+    content: "Yayoi Iwasa";
+    width: 91px;
+    height: 61px;
+    position: absolute;
+    top: 24px;
+    right: 45px;
+    transform: rotate(8deg);
+}
+  .item__card:nth-child(3):before{
+    content: "Masao Sato";
+    width: 115px;
+    height: 75px;
+    position: absolute;
+    top: 25px;
+    right: 23px;
+    transform: rotate(8deg);
+}
+  .item__card:nth-child(4):before{
+    content: "Ayaka Ueda";
+    width: 95px;
+    height: 71px;
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    transform: rotate(8deg);
+}
+  .item__card:nth-child(5):before{
+    content: "Itsuki Onishi";
+    width: 120px;
+    height: 55px;
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    transform: rotate(8deg);
+}
+
+
+/* ========================
+*******loginpage.html*******
+===========================*/
+
+.loginpage__title{
+    text-align: center;
+    font-family: "Zen Old Mincho";
+    font-size: 2.4rem;
+    margin: 45px auto 40px;
+}
+h1{
+    width: 245px;
+    height: 90px;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-text-stroke-width: 0.6000000238418579;
+    font-family: "Academy Engraved LET";
+    font-size: 4.8rem;
+    font-weight: 600;
+    line-height: 100%; /* 64px */
+    letter-spacing: 1.92px;
+}
+.form-group{
+    width: 300px;
+    margin: 25px auto 0;
+}
+label{
+    display: block;
+    text-align: left;
+    font-family: "Zen Maru Gothic";
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 5px;
+
+    
+}
+input{
+    display: block;
+    width: 300px;
+    height: 46px;
+    border: none;
+    background-color:#FFF1E7;
+    margin: 0 auto;
+    box-shadow: inset 2px 2px 2px 2px rgba(78, 27, 16, 0.25);
+}
+
+.btn-border-shadow4 {
+    margin: 0 auto;
+    align-items: center;
+    width: 240px;
+    height: 40px;
+    margin: 60px auto 0;
+    background: rgba(249, 188, 160, 0.55);
+    box-shadow: 4px 4px 4px 0px rgba(78, 27, 16, 0.25);
+
+    font-family: "Zen Maru Gothic";
+    font-size: 2.4rem;
+    font-weight: 400;
+
+    display: flex;
+    justify-content: space-around;
+
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-border-shadow4:before {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 100%;
+    height: 100%;
+    content: "";
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid;
+}
+.btn-border-shadow4:hover:before {
+    top: 0;
+    left: 0;
+}
+.btn-border-shadow4:active {
+    background: rgba(246, 143, 114, 0.55);
+ } 
+
+
+.forget{
+    text-align: center;
+    font-family: "Zen Maru Gothic";
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 5%; /* 0.75px */
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    margin: 20px auto 50px;
+}
+.registration{
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 5%; /* 0.8px */
+    margin: 0 auto 70px;
+}
+
+/* ==========================
+******reservation.html*******
+=============================*/
+/* .reservation{
+    display: block;
+    margin: 0 auto;
+} */
+.reservation figure{
+    display: none;
+}
+.reservation figure.on{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.reserve__pic{
+    width: 110px;
+    height: 110px;
+    margin-top: 50px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 0px rgba(78, 27, 16, 0.25);
+    
+}
+.reserve__caption p{
+    text-align: center;
+    font-family: "Zen Old Mincho";
+    font-size: 2.0rem;
+    font-weight: 600;
+    margin-left: 10px;
+    
+}
+.reserve__caption p span{
+    font-family: "Hiragino Sans";
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 180%;
+    letter-spacing: 0.45px;
+}
+.reservation a{
+    display: block;
+    margin-left: 10px;
+    font-family: "Hiragino Sans";
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-underline-position: from-font;
+}
+.try{
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+.name__bar h2{
+    text-align: left;
+    font-family: "Hiragino Sans";
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 180%; /* 25.2px */
+    letter-spacing: 0.42px;
+    margin-top: 35px;
+    margin-left: 7%;
+    max-width: 375px;
+}
+
+/* =========横スクロール=========== */
+
+.scroll {
+    margin-bottom: 25px;
+    overflow-x: scroll;
+    white-space: nowrap;
+    /* IE, Edge 対応 */
+    -ms-overflow-style: none;
+    /* Firefox 対応 */
+    scrollbar-width: none;
+}
+/* Chrome, Safari 対応 */
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+.name__wrapper{
+    width: 600px;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    margin:5px auto;
+}
+.name__wrapper li{
+    text-align: center;
+    font-family: "Hiragino Sans";
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 180%; /* 27px */
+    letter-spacing: 0.45px;
+    padding: 1px 12px 0;
+    border: 0.7px solid;
+    background:  #FFF1E7;
+    box-shadow: 0px 4px 4px 0px rgba(78, 27, 16, 0.25);
+    border-radius: 25px;
+    cursor: pointer;
+}
+.name__wrapper li.on{
+    background-color: #f8d7da;
+}
+.name__wrapper li:hover{
+    background-color: #f8d7da;
+}
+.choice{
+    max-width: 375px;
+    margin: 0 auto 15px;
+
+}
+.choice h2{
+    font-family: "Hiragino Sans";
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 180%; /* 25.2px */
+    letter-spacing: 0.42px;
+    margin-left: 7%;
+    margin-top: 25px;
+    
+}
+.choice div{
+    display: flex;
+    margin: 5px auto;
+    justify-content: space-between;
+}
+.choice button{
+    text-align: center;
+    font-family: "Hiragino Sans";
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 180%; /* 19.8px */
+    letter-spacing: 0.33px;
+    padding: 3px 20px 2px;
+    border-radius: 4px;
+    border: 0.6px solid  #4E1B10;
+    background:  #FFF1E7;
+    box-shadow: 0px 4px 4px 0px rgba(78, 27, 16, 0.25);
+    margin: 5px 2%; 
+}
+.choice p span{
+    color: #985E6F;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #985E6F;
+    font-family: "Hiragino Sans";
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 180%; /* 28.8px */
+    letter-spacing: 0.48px;
+}
+.choice p{
+    margin: 15px auto 0 7%;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 100%; /* 11px */
+}
+
+/* =========予約カレンダー表 ===========*/
+
+table {
+     width: 100%; 
+    border-collapse: collapse;
+    margin: 0 auto;
+    table-layout: fixed;
+    max-width: 365px;  
+ }
+th, td {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 5px;
+    font-family: "Hiragino Sans";
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 180%; /* 19.8px */
+    letter-spacing: 0.33px;
+    word-wrap: break-word;
+ }
+th {
+    background-color: #e6e2e2;
+ }
+ .saturday{
+    background-color: #D9E3EC;
+    color: #4466BB;
+ }
+ .sunday{
+    background-color: #FFDEE7;
+    color: #BB5555;
+ }
+td.available {
+    background-color: #FFF1E7;
+    color: #985E6F;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #985E6F;
+    font-family: "Hiragino Sans";
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 180%; /* 28.8px */
+    letter-spacing: 0.48px;
+    cursor: pointer;
+}
+td.available:hover{
+    background-color: #f8d7da;
+}
+td.available.on{
+    background-color: #f8d7da;
+}
+td.booked {
+    background-color: rgb(199, 195, 195);
+    color: #4E1B10;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 180%; /* 28.8px */
+    letter-spacing: 0.48px;
+}
+.weektime{
+    background-color: #e6e2e2;
+    width: 65px;
+    vertical-align: middle;
+}
+
+.confirm h2{
+    text-align: center;
+    align-items: center;
+    font-family: "Hiragino Sans";
+    font-size: 2.2rem;
+    font-weight: 500;
+    padding-top: 6px;
+    background: rgba(249, 188, 160, 0.55);
+    box-shadow: 0px 4px 4px 0px rgba(78, 27, 16, 0.25);
+    height: 37px;
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+.confirm div{
+    display: flex;
+    justify-content: space-between;
+    max-width: 375px;
+    padding: 0 25px;
+    margin: 0 auto;
+}
+.confirm h3{
+    text-align: center;
+    font-family: "Hiragino Sans";
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 180%; /* 27px */
+    letter-spacing: 0.45px;
+    margin-bottom: 10px;
+}
+.confirm p{
+    text-align: center;
+    font-family: "Hiragino Sans";
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 180%; /* 27px */
+   
+}
+ .line{
+    text-decoration: underline;
+ } 
+
+ h4{
+    font-family: "Hiragino Sans";
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 180%; /* 21.6px */
+    letter-spacing: 0.36px;
+    text-align: center;
+    margin: 25px auto 0;
+}
+.attention p{
+    font-family: "Hiragino Sans";
+    font-size: 1.1rem;
+    font-weight: 250;
+    line-height: 180%; 
+    letter-spacing: 0.33px;
+    width: 280px;
+    height: 100px;
+    margin:5px auto 25px;
+} 
+.finalize,.change{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-top: 9px;
+    width: 240px;
+    height: 47px;
+    margin: 25px auto;
+    box-shadow: 4px 4px 4px 0px rgba(78, 27, 16, 0.25);
+
+    font-family: "Zen Maru Gothic";
+    font-size: 2.2rem;
+    font-weight: 400;
+    
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.finalize .sub{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: -3px;
+    margin-bottom: -2px;
+}
+.finalize{
+    background: rgba(249, 188, 160, 0.55);
+    position: relative;
+}
+.change{
+    background-color: rgba(255, 241, 231, 0.55);
+    position: relative;
+}
+.finalize:before,.change:before{
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 100%;
+    height: 100%;
+    content: "";
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid;
+}
+.finalize:hover:before,.change:hover:before {
+    top: 0;
+    left: 0;
+}
+.finalize:active {
+    background: rgba(246, 143, 114, 0.55);
+ } 
+ .change:active{
+    background-color: rgba(229, 175, 137, 0.55);;
+
+ }
